@@ -69,35 +69,39 @@ function add_shape(shape, table, color, bordercolor){
 }
 
 var shapes = [
-     one ,
-     two ,
-     vee_three ,
-     el_three ,
-     tee_four ,
-     oh ,
-     big_el_four ,
-     el_four ,
-     zee_four ,
-     eff ,
-     eggs ,
-     pee ,
-     double_ewe ,
-     zee_five ,
-     why ,
-     big_el_five ,
-     ewe ,
-     tee_five ,
-     vee_five ,
-     en ,
-     el_five ,
+     ["One Piece", one],
+     ["Two Piece", two ],
+     ["Three L", vee_three ],
+     ["Three Piece", el_three ],
+     ["Small T", tee_four ],
+     ["Block", oh ],
+     ["Little L", big_el_four ],
+     ["Four Piece", el_four ],
+     ["S Piece", zee_four ],
+     ["Weird F Piece", eff ],
+     ["Plus", eggs ],
+     ["Turtle", pee ],
+     ["Zig-zag", double_ewe ],
+     ["Big S", zee_five ],
+     ["That one piece", why ],
+     ["Long L", big_el_five ],
+     ["Hat", ewe ],
+     ["Big T", tee_five ],
+     ["Big L", vee_five ],
+     ["Long S", en ],
+     ["Five Piece", el_five ],
      ];
 
 function do_it(){
     for(var i = 0; i < shapes.length; i++){
         var table = document.createElement("table");
+
+        var heading = document.createElement('h3');
+        heading.innerText = shapes[i][0];
+        document.getElementById("blocks").appendChild(heading);
+
         table.style.borderCollapse = "collapse";
-        add_shape(shapes[i], table, 'red', 'pink');
+        add_shape(shapes[i][1], table, 'red', 'pink');
         document.getElementById("blocks").appendChild(table);
-        document.getElementById("blocks").appendChild(document.createElement('hr'));
     }
 }
