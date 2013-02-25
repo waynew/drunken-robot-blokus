@@ -107,13 +107,17 @@ var blocks = [
     ]
 ];
 
+var shapes = [];
+for(var i = 0; i < blocks.length; i++){
+    var shape = new Shape(blocks[i][0],
+                          blocks[i][1]);
+    shapes.push(shape);
+}
 
 function do_it(){
-    var shapes = [];
-    for(var i = 0; i < blocks.length; i++){
-        var shape = Shape(blocks[i][0],
-                          blocks[i][1]);
-        shapes.push(shape);
+    for(var i = 0; i < shapes.length; i++){
+        var shape = shapes[i];
+        document.getElementById("blocks").appendChild(shape.header());
         document.getElementById("blocks").appendChild(shape.table());
     }
 }

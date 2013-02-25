@@ -4,6 +4,13 @@ function Shape(name, shape, color, bordercolor){
     this.color = color || "blue";
     this.bordercolor = bordercolor || "lightblue";
 
+    this.header = function(){
+        var h = document.createElement("h3");
+        h.innerText = this.name;
+        return h;
+    };
+
+
     this.table = function(){
         var table = document.createElement("table");
         table.style.borderCollapse = "collapse";
@@ -24,6 +31,6 @@ function Shape(name, shape, color, bordercolor){
             table.appendChild(row_el);
         }
         return table;
-    }
+    };
     return this;
 }
