@@ -93,6 +93,13 @@ var shapes = [
      ];
 
 function do_it(){
+    var s = Shape("one", [[1]]);
+    var s = Shape("Zig-Zag", [[1, 0, 0],
+                              [1, 1, 0],
+                              [0, 1, 1]]);
+    document.getElementById("blocks").appendChild(s.table());
+
+    /*
     for(var i = 0; i < shapes.length; i++){
         var table = document.createElement("table");
 
@@ -104,4 +111,5 @@ function do_it(){
         add_shape(shapes[i][1], table, 'red', 'pink');
         document.getElementById("blocks").appendChild(table);
     }
+    */
 }
