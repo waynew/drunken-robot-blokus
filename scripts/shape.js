@@ -32,5 +32,7 @@ function Shape(name, shape, color, bordercolor){
         }
         return table;
     };
+
+
     return this;
 }

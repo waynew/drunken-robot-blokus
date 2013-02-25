@@ -14,12 +14,16 @@
                 div.appendChild(shape.table());
             }
         </script>
+        <style>
+            #next {
+                border: thin black solid;
+                height: 100%;
+                width: 100%;
+            }
+        </style>
     </head>
 <body>
-    <div id="next" onclick="next_block();" style="border: thin black solid">
-    </div>
-    <div id="blocks">
-    </div>
-    <script>do_it();next_block();</script>
+    <div id="next" onclick="next_block();"></div>
+    <script>next_block();</script>
 </body>
 </html>

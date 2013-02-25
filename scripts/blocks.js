@@ -121,3 +121,8 @@ function do_it(){
         document.getElementById("blocks").appendChild(shape.table());
     }
 }
+
+function random_shape(){
+    var index = Math.floor(Math.random()*shapes.length);
+    return shapes[index];
+}
